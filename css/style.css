@@ -1,0 +1,1219 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #040404;
+}
+
+span{
+    color: #00ff6e;
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/img/bg.png);
+    background-size: cover;
+    background-position: right;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 250px;
+    padding-top: 15px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #ffff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #00ff6e;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+nav .fas{
+    display: none;
+    color: #ffff;
+}
+
+.hero-txt{
+    margin-top: 12%;
+}
+
+.hero-txt h1{
+    color: #ffff;
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero-txt h3{
+    color: #ffff;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.social{
+	display: flex;
+}
+.social a{
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid  #00ff6e;
+	border-radius: 50%;
+	margin: 20px 20px 0 0;
+	color: white;
+	text-decoration: none;
+	font-size: 25px;
+}
+
+.social a:hover{
+	transform: scale(1.3);
+	transition: .3s;
+}
+
+.hero-txt h6{
+	margin: 40px 0 0 0;
+    color: white;
+	font-weight: 600;
+	font-size: 25px;
+}
+
+
+/*----About----*/
+
+.about{
+    padding: 50px 0;
+    background-color: #191919;
+    color: #9fabb7;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 400px;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.about-col-2 h1{
+    font-size: 50px;
+    font-weight: 600;
+    color: #ffff;
+}
+
+.about-col-2 p{
+    text-align: justify;
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 30px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #00ff6e;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.tab-contents ul li span{
+    color: #00cc58;
+    font-size: 16px;
+}
+
+.tab-contents p{
+    font-size: 18px;
+    border: 1px solid #00ff6e;
+    width: fit-content;
+    padding: 5px 10px;
+    margin-right: 10px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/*----Services----*/
+
+.services{
+    padding: 50px 0;
+}
+
+.services .container h1{
+    font-size: 50px;
+    color: #ffff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    color: #ffff;
+}
+
+.services-list div{
+    text-align: center;
+    background: #191919;
+    padding: 40px;
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 10px;
+}
+
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: #00ff6e;
+}
+
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.services-list div a{
+    text-decoration: none;
+    color: #ffff;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.button{
+	background-color:transparent;
+	color: white;
+	text-decoration: none;
+	border: 2px solid #00ff6e;
+	font-weight: bold;
+	padding: 9px 22px;
+	border-radius: 10px;
+	transition: .4s; 
+}
+
+.button:hover{
+	background-color: #00ff6e;
+	border: 2px solid transparent;
+	color: #191919;
+	cursor: pointer;
+}
+
+/*----Portfolio----*/
+
+.portfolio{
+    padding: 50px 0;
+    background-color: #191919;
+}
+
+.portfolio h1{
+    color: #ffff;
+    font-size: 50px;
+    text-align: center;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.9), #00ff6e);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.6s;
+}
+
+.layer h3{
+    font-weight: 500;
+    font-size: 20px;
+    color: #ffff;
+}
+
+.layer p{
+    color: #ffff;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: #00ff6e;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #191919;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.portfolio-btn{
+    padding: 14px 60px;
+    display: block;
+    width: fit-content;
+    margin: 50px auto 0;
+    font-size: 18px;
+}
+
+/*----Contact----*/
+
+.contact{
+    padding: 50px 0 75px;
+    background-color: #040404;
+}
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-left h1{
+    color: #ffff;
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.contact-left h3{
+    font-size: 25px;
+}
+
+.contact-left .social{
+    margin-top: 40px;
+}
+
+.contact-left h6{
+	margin-top: 40px;
+    color: white;
+	font-weight: 600;
+	font-size: 25px;
+}
+
+.contact-right{
+    flex-basis: 55%;
+}
+
+.cv-btn{
+    display: inline-block;
+    padding: 14px 60px;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+.contact-right form{
+    width: 100%;
+
+}
+
+.contact-right form input, .contact-right form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #191919;
+    padding: 15px;
+    margin: 15px 0;
+    color: #ffff;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.form-btn{
+    font-size: 18px;
+    padding: 14px 60px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/*----Footer----*/
+
+footer{
+	padding: 30px 0 30px 0;
+	background-color: #040404;
+    border-top: 1px solid #00ff6e;
+	color: white;
+	font-size: 30px;
+	text-align: center;
+}
+
+footer h6{
+	font-weight: 400;
+}
+
+/*----------Responsive----------*/
+
+@media only screen and (max-width:1024px){
+    .logo{
+        width: 220px;
+    }
+    
+    .hero-txt h1{
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    .hero-txt h3{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .hero-txt h6{
+        margin-top: 40px;
+        font-size: 21px;
+    }
+
+    .social a{
+        font-size: 18px;
+        height: 40px;
+        width: 40px;
+    }
+
+    nav .fas{
+        display: block;
+        font-size: 30px;
+    }
+
+    nav ul{
+        background: #191919;
+        position: fixed;
+        top: 0;
+        right: -320px;
+        width: 320px;
+        height: 100vh;
+        padding: 50px;
+        z-index: 2;
+        transition: right 0.6s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .about-col-1{
+        flex-basis: 35%;
+    }
+
+    .about-col-2{
+        flex-basis: 55%;
+    }
+    
+    .about-col-1 img{
+        width: 350px;
+    }
+
+    .about-col-2 h1{
+        font-size: 35px;
+    }
+    
+    .about-col-2 p{
+        margin-top: 15px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .tab-titles{
+        display: flex;
+        margin: 10px 0 15px;
+    }
+
+    .tab-contents ul li{
+        font-size: 15px;
+    }
+
+    .tab-contents p{
+        font-size: 14px;
+    }
+
+    .services .container h1{
+        font-size: 35px;
+    }
+    
+    .services-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-gap: 30px;
+        margin-top: 35px;
+    }
+
+    .services-list div{
+        padding: 30px;
+        font-size: 16px;
+    }
+
+    .services-list div i{
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .services-list div h2{
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
+
+    .services-list div a{
+        font-size: 14px;
+        margin-top: 14px;
+    }
+
+    .portfolio h1{
+        font-size: 35px;
+    }
+
+    .work-list{
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-gap: 30px;
+        margin-top: 35px;
+    }
+
+    .portfolio-btn{
+        padding: 12px 40px;
+        margin: 35px auto 0;
+        font-size: 14px;
+    }
+
+    .contact-left h1{
+        font-size: 35px;
+    }
+
+    .contact-left h3{
+        font-size: 18px;
+    }
+
+    .contact-left .social a{
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .contact-left .social{
+        margin-top: 30px;
+    }
+    
+    .contact-left h6{
+        margin-top: 30px;
+        font-size: 18px;
+    }
+
+    .cv-btn{
+        padding: 12px 40px;
+        margin-top: 30px;
+        font-size: 16px;
+    }
+
+    .contact-right form input, .contact-right form textarea{
+        padding: 12px;
+        margin: 12px 0;
+        font-size: 16px;
+    }
+    
+    .form-btn{
+        font-size: 16px;
+        padding: 12px 40px;
+        margin-top: 12px;
+    }
+
+    footer{
+        padding: 20px 0;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:770px){
+    .logo{
+        width: 190px;
+    }
+    
+    .hero-txt h1{
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    .hero-txt h3{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .hero-txt h6{
+        margin-top: 40px;
+        font-size: 21px;
+    }
+
+    .social a{
+        font-size: 18px;
+        height: 40px;
+        width: 40px;
+    }
+
+    nav .fas{
+        display: block;
+        font-size: 30px;
+    }
+
+    nav ul{
+        background: #191919;
+        position: fixed;
+        top: 0;
+        right: -320px;
+        width: 320px;
+        height: 100vh;
+        padding: 50px;
+        z-index: 2;
+        transition: right 0.6s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .about-col-1{
+        flex-basis: 15%;
+    }
+
+    .about-col-2{
+        flex-basis: 50%;
+    }
+    
+    .about-col-1 img{
+        width: 260px;
+    }
+
+    .about-col-2 h1{
+        font-size: 30px;
+    }
+
+    .about-col-2 p{
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .tab-titles{
+        display: flex;
+        margin: 10px 0 15px;
+    }
+
+    .tab-contents ul li{
+        font-size: 13px;
+    }
+
+    .tab-contents p{
+        font-size: 13px;
+    }
+
+    .services .container h1{
+        font-size: 30px;
+    }
+    
+    .services-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-gap: 30px;
+        margin-top: 30px;
+    }
+
+    .services-list div{
+        padding: 25px 15px;
+        font-size: 14px;
+    }
+
+    .services-list div i{
+        font-size: 30px;
+        margin-bottom: 16px;
+    }
+
+    .services-list div h2{
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+
+    .services-list div a{
+        font-size: 14px;
+        margin-top: 14px;
+    }
+
+    .portfolio h1{
+        font-size: 30px;
+    }
+
+    .work-list{
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-gap: 30px;
+        margin-top: 30px;
+    }
+
+    .layer{
+        padding: 0 20px;
+    }
+    
+    .layer h3{
+        font-size: 18px;
+    }
+    
+    .layer p{
+        font-size: 12px;
+    }
+    
+    .layer a{
+        font-size: 16px;
+        line-height: 50px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .portfolio-btn{
+        padding: 10px 30px;
+        margin: 35px auto 0;
+        font-size: 12px;
+    }
+    
+    .contact-left{
+        flex-basis: 30%;
+    }
+
+    .contact-right{
+        flex-basis: 50%;
+    }
+    
+    .contact-left h1{
+        font-size: 30px;
+    }
+
+    .contact-left h3{
+        font-size: 16px;
+    }
+
+    .contact-left .social a{
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .contact-left .social{
+        margin-top: 25px;
+    }
+    
+    .contact-left h6{
+        margin-top: 25px;
+        font-size: 16px;
+    }
+
+    .cv-btn{
+        padding: 10px 30px;
+        margin-top: 25px;
+        font-size: 14px;
+    }
+
+    .contact-right form input, .contact-right form textarea{
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    
+    .form-btn{
+        font-size: 14px;
+        padding: 10px 30px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width:425px){
+    .logo{
+        width: 170px;
+    }
+
+    span{
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .hero-txt{
+        margin-top: 150px;
+    }
+    
+    .hero-txt h1{
+        font-size: 40px;
+        margin-bottom: 12px;
+    }
+
+    .hero-txt h3{
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    .hero-txt h6{
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .social a{
+        font-size: 17px;
+        height: 35px;
+        width: 35px;
+        margin: 0 11px 0 0;
+    }
+
+    nav .fas{
+        display: block;
+        font-size: 30px;
+    }
+
+    nav ul{
+        background: #191919;
+        position: fixed;
+        top: 0;
+        right: -320px;
+        width: 320px;
+        height: 100vh;
+        padding: 50px;
+        z-index: 2;
+        transition: right 0.6s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .about-col-1{
+        flex-basis: 100%;
+        display: none;
+    }
+
+    .about-col-2{
+        width: 100%;
+        flex-basis: 60%;
+    }
+
+    .about-col-2 h1{
+        text-align: center;
+        margin-top: -30px;
+        font-size: 40px;
+    }
+
+    .about-col-2 p{
+        margin-top: 15px;
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    .tab-titles{
+        font-size: 18px;
+        margin: 10px 0 30px;
+    }
+
+    .tab-contents ul li{
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .tab-contents ul li span{
+        display: inline;
+        margin-bottom: 5px;
+    }
+
+    .tab-contents p{
+        font-size: 13px;
+    }
+
+    .services .container h1{
+        margin-top: -20px;
+        font-size: 40px;
+    }
+    
+    .services-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-gap: 30px;
+        margin-top: 30px;
+    }
+
+    .services-list div{
+        padding: 35px;
+        font-size: 18px;
+    }
+
+    .services-list div i{
+        font-size: 40px;
+        margin-bottom: 16px;
+    }
+
+    .services-list div h2{
+        font-size: 22px;
+        margin-bottom: 14px;
+    }
+
+    .services-list div a{
+        font-size: 16px;
+        margin-top: 14px;
+    }
+
+    .portfolio h1{
+        margin-top: -20px;
+        font-size: 40px;
+    }
+
+    .work-list{
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        grid-gap: 30px;
+        margin-top: 30px;
+    }
+
+    .portfolio-btn{
+        padding: 12px 40px;
+        margin: 35px auto 0;
+        font-size: 14px;
+    }
+    
+    .contact-left{
+        flex-basis: 100%;
+    }
+
+    .contact-right{
+        flex-basis: 100%;
+    }
+    
+    .contact-left h1{
+        text-align: center;
+        margin-top: -20px;
+        font-size: 40px;
+    }
+
+    .contact-left h3{
+        text-align: center;
+        margin-top: 5px;
+        font-size: 20px;
+    }
+
+    .contact-left .social{
+        margin-left: 40px;
+        margin-top: 25px;
+    }
+
+    .contact-left .social a{
+        width: 35px;
+        height: 35px;
+        font-size: 17px;
+    }
+    
+    .contact-left h6{
+        text-align: center;
+        margin-top: 25px;
+        font-size: 20px;
+    }
+
+    .cv-btn{
+        padding: 10px 30px;
+        margin: 25px 0 30px 90px;
+        font-size: 14px;
+    }
+
+    .contact-right form input, .contact-right form textarea{
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    
+    .form-btn{
+        font-size: 14px;
+        padding: 10px 30px;
+        margin-top: 10px;
+    }
+
+    footer{
+        padding: 20px 0;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width:375px){
+    .logo{
+        width: 150px;
+    }
+    
+    .hero-txt h1{
+        font-size: 40px;
+        margin-bottom: 8px;
+    }
+
+    .hero-txt h3{
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .hero-txt h6{
+        margin-top: 20px;
+        font-size: 14px;
+    }
+
+    .social a{
+        font-size: 15px;
+        height: 30px;
+        width: 30px;
+        margin: 0 11px 0 0;
+    }
+
+    nav ul{
+        background: #191919;
+        position: fixed;
+        top: 0;
+        right: -320px;
+        width: 320px;
+        height: 100vh;
+        padding: 50px;
+        z-index: 2;
+        transition: right 0.6s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .about-col-1{
+        flex-basis: 100%;
+        display: none;
+    }
+
+    .about-col-2{
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .about-col-2 h1{
+        text-align: center;
+        margin-top: -30px;
+        font-size: 35px;
+    }
+
+    .about-col-2 p{
+        margin-top: 15px;
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    .tab-links{
+        margin-right: 20px;
+    }
+
+    .services .container h1{
+        margin-top: -20px;
+        font-size: 35px;
+    }
+
+    .portfolio h1{
+        margin-top: -20px;
+        font-size: 35px;
+    }
+
+    .work-list{
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        grid-gap: 30px;
+        margin-top: 30px;
+    }
+    
+    .contact-left h1{
+        text-align: center;
+        margin-top: -20px;
+        font-size: 35px;
+    }
+
+    .contact-left h3{
+        text-align: center;
+        margin-top: 5px;
+        font-size: 18px;
+    }
+
+    .contact-left .social{
+        margin-left: 30px;
+        margin-top: 25px;
+    }
+
+    .contact-left .social a{
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+    
+    .contact-left h6{
+        text-align: center;
+        margin-top: 25px;
+        font-size: 15px;
+    }
+
+    .cv-btn{
+        padding: 10px 30px;
+        margin: 25px 0 30px 70px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:320px){
+    .logo{
+        width: 150px;
+    }
+
+    .hero-txt{
+        margin-top: 230px;
+    }
+    
+    .contact-left .social{
+        margin-left: 15px;
+        margin-top: 25px;
+    }
+
+    .cv-btn{
+        margin: 25px 0 15px 55px;
+    }
+}
